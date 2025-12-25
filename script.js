@@ -435,7 +435,7 @@ document.addEventListener('DOMContentLoaded', function () {
             setLoadingState(true);
 
             // 👇 SAFE call (NO TOKEN in frontend)
-            const response = await fetch('/.netlify/functions/github');
+            const response = await fetch('/api/github');
 
             if (!response.ok) {
                 throw new Error(`Server Error: ${response.status}`);

@@ -1,4 +1,4 @@
-export async function handler() {
+export default async function handler(req, res) {
   const token = process.env.GITHUB_TOKEN;
   const username = process.env.GITHUB_USERNAME;
 
@@ -14,14 +14,14 @@ export async function handler() {
         following { totalCount }
         starredRepositories { totalCount }
         contributionsCollection {
-          contributionCalendar { totalContributions }
           totalCommitContributions
+          contributionCalendar { totalContributions }
         }
       }
     }
   `;
 
-  const res = await fetch('https://api.github.com/graphql', {
+  const response = await fetch('https://api.github.com/graphql', {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${token}`,
@@ -30,13 +30,9 @@ export async function handler() {
     body: JSON.stringify({
       query,
       variables: { username }
-    })
+    }),
   });
 
-  const data = await res.json();
-
-  return {
-    statusCode: 200,
-    body: JSON.stringify(data.data.user),
-  };
+  const data = await response.json();
+  res.status(200).json(data.data.user);
 }
