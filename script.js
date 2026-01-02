@@ -518,17 +518,33 @@ document.addEventListener('DOMContentLoaded', function () {
     fetchGitHubData();
 });
 
-document.getElementById("contact-form").addEventListener("submit", async (e) => {
-  e.preventDefault();
+<script>
+document.getElementById("contact-form").addEventListener("submit", async function (e) {
+  e.preventDefault(); // STOP default submit
 
-  const formData = Object.fromEntries(new FormData(e.target));
+  const formData = Object.fromEntries(new FormData(this));
 
-  const res = await fetch("/api/contact", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(formData)
-  });
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData)
+    });
 
-  const result = await res.json();
-  alert(result.success ? "Message sent!" : "Failed to send");
+    const result = await response.json();
+
+    if (result.success) {
+      alert("Message sent successfully!");
+      this.reset();
+    } else {
+      alert("Failed to send message");
+    }
+
+  } catch (error) {
+    console.error("FORM ERROR:", error);
+    alert("Server error. Try again later.");
+  }
 });
+</script>

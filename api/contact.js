@@ -3,9 +3,9 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: "Method not allowed" });
   }
 
-  const { name, email, subject, message } = req.body;
-
   try {
+    const { name, email, subject, message } = req.body;
+
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -20,9 +20,9 @@ export default async function handler(req, res) {
 
     const data = await response.json();
     return res.status(200).json(data);
-  } catch (error) {
+
+  } catch (err) {
+    console.error("CONTACT ERROR:", err);
     return res.status(500).json({ success: false });
   }
 }
-
-console.log("WEB3FORMS_KEY:", process.env.WEB3FORMS_KEY);
