@@ -518,7 +518,7 @@ document.addEventListener('DOMContentLoaded', function () {
     fetchGitHubData();
 });
 
-<script>
+
 document.getElementById("contact-form").addEventListener("submit", async function (e) {
   e.preventDefault(); // STOP default submit
 
@@ -547,4 +547,3 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     alert("Server error. Try again later.");
   }
 });
-</script>
