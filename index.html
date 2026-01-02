@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="#9654" href="img.png">
@@ -9,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <!-- Theme Toggle Button -->
     <div class="theme-toggle">
@@ -68,7 +66,7 @@
             <h2 class="section-title">About <span>Me</span></h2>
             <div class="about-content">
                 <div class="about-image">
-                    <img src="profileimg.jpg" height="400px" width="300px" alt="About Me">
+                  <img src="profileimg.jpg" height="400px" width="300px" alt="About Me">
                 </div>
                 <div class="about-text">
                     <h3>Who am I ?</h3>
@@ -115,10 +113,10 @@
         </div>
     </section>
     <!-- Certifications Section -->
-    <section id="certifications" class="certifications">
+ <section id="certifications" class="certifications">
         <div class="container">
             <h2 class="section-title">My <span>Certifications</span></h2>
-
+            
             <!-- Certifications Grid -->
             <div class="certifications-grid" id="certificationsGrid">
                 <!-- First 3 certificates (always visible) -->
@@ -130,11 +128,10 @@
                         <h3>Andorid Development</h3>
                         <p>Issued by: Google</p>
                         <p>Date: March 2025</p>
-                        <a href="https://drive.google.com/file/d/1Gzp0C6LiZGPJEHSORr8CZVZRaxgZdnL9/view?usp=sharing"
-                            target="/" class="btn btn-small">View Certificate</a>
+                        <a href="https://drive.google.com/file/d/1Gzp0C6LiZGPJEHSORr8CZVZRaxgZdnL9/view?usp=sharing" target="/" class="btn btn-small">View Certificate</a>
                     </div>
                 </div>
-
+                
                 <div class="certification-card">
                     <div class="certification-image">
                         <i class="fab fa-linux"></i>
@@ -143,11 +140,10 @@
                         <h3>Linux</h3>
                         <p>Issued by: Red Hat</p>
                         <p>Date: Janurary 2025</p>
-                        <a href="https://drive.google.com/file/d/1hRk30kKbhHH_P443Ttbfl-FHfmEU8_45/view?usp=drive_link"
-                            class="btn btn-small" target="/">View Certificate</a>
+                        <a href="https://drive.google.com/file/d/1hRk30kKbhHH_P443Ttbfl-FHfmEU8_45/view?usp=drive_link" class="btn btn-small" target="/">View Certificate</a>
                     </div>
                 </div>
-
+                
                 <div class="certification-card">
                     <div class="certification-image">
                         <i class="fas fa-sun"></i>
@@ -156,14 +152,13 @@
                         <h3>MaterChef 3.0 Marketing</h3>
                         <p>Issued by: Keurig KiiT University</p>
                         <p>Date: Janurary 2025</p>
-                        <a href="https://drive.google.com/file/d/1VpIrkUmNjYMR0qZ-kVu8B0wz62buW_I3/view?usp=sharing"
-                            class="btn btn-small" target="/">View Certificate</a>
+                        <a href="https://drive.google.com/file/d/1VpIrkUmNjYMR0qZ-kVu8B0wz62buW_I3/view?usp=sharing" class="btn btn-small" target="/">View Certificate</a>
                     </div>
                 </div>
-
+                
                 <!-- Additional certificates will be added here by JavaScript -->
             </div>
-
+            
             <!-- View More Button -->
             <div class="view-more-container">
                 <button id="view-more-certs" class="btn">View More</button>
@@ -171,41 +166,41 @@
         </div>
     </section>
 
-    <!-- GitHub Dashboard Section -->
-    <section id="github" class="github-dashboard">
-        <div class="container">
-            <h2 class="section-title">GitHub <span>Dashboard</span></h2>
-
-            <div class="github-info">
-                <div class="github-header">
-                    <div class="github-profile">
-                        <div class="profile-avatar">
-                            <img id="github-avatar" src="" alt="GitHub Profile">
-                        </div>
-                        <div class="profile-info">
-                            <h3 id="github-name">GitHub Profile</h3>
-                            <p id="github-bio">Loading profile information...</p>
-                            <div class="profile-handle">
-                                <i class="fab fa-github"></i>
-                                <span id="github-username">@siddharthtiwar0403</span>
-                            </div>
+<!-- GitHub Dashboard Section -->
+<section id="github" class="github-dashboard">
+    <div class="container">
+        <h2 class="section-title">GitHub <span>Dashboard</span></h2>
+        
+        <div class="github-info">
+            <div class="github-header">
+                <div class="github-profile">
+                    <div class="profile-avatar">
+                        <img id="github-avatar" src="" alt="GitHub Profile">
+                    </div>
+                    <div class="profile-info">
+                        <h3 id="github-name">GitHub Profile</h3>
+                        <p id="github-bio">Loading profile information...</p>
+                        <div class="profile-handle">
+                            <i class="fab fa-github"></i>
+                            <span id="github-username">@siddharthtiwar0403</span>
                         </div>
                     </div>
-                    <button id="fetch-github-btn" class="btn">
-                        <i class="fas fa-sync-alt"></i> Refresh Data
-                    </button>
                 </div>
-
-                <div class="github-stats-grid" id="github-stats">
-                    <!-- All statistics cards will be here in a single grid -->
-                    <div class="loading-state">
-                        <i class="fas fa-spinner fa-spin"></i>
-                        <p>Loading GitHub statistics...</p>
-                    </div>
+                <button id="fetch-github-btn" class="btn">
+                    <i class="fas fa-sync-alt"></i> Refresh Data
+                </button>
+            </div>
+            
+            <div class="github-stats-grid" id="github-stats">
+                <!-- All statistics cards will be here in a single grid -->
+                <div class="loading-state">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading GitHub statistics...</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
     <!-- Contact Section -->
@@ -215,7 +210,7 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>Let's Connect</h3>
-
+                    
                     <div class="info-item">
                         <i class="fas fa-envelope"></i>
                         <p>siddharthtiwari1350@gmail.com</p>
@@ -232,17 +227,15 @@
                     <div class="social-links">
                         <a href="https://github.com/siddharthtiwar0403" target="/"><i class="fab fa-github"></i></a>
 
-                        <a href="https://www.linkedin.com/in/siddharthtiwari0403" target="/"><i
-                                class="fab fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/siddharthtiwari0403" target="/"><i class="fab fa-linkedin"></i></a>
 
-                        <a href="https://www.instagram.com/siddharthtiwari0403" target="/"><i class="fab fa-instagram"
-                                target="/"></i></a>
+                        <a href="https://www.instagram.com/siddharthtiwari0403" target="/"><i class="fab fa-instagram" target ="/"></i></a>
 
-                        <a href="https://www.facebook.com/siddharth.tiwari.90038882/" target="/"><i
-                                class="fab fa-facebook"></i></a>
+                        <a href="https://www.facebook.com/siddharth.tiwari.90038882/"
+                        target="/"><i class="fab fa-facebook"></i></a>
                     </div>
                 </div>
-                <form id="contact-form" class="contact-form">
+                <form id="contact-form"  class="contact-form">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
@@ -251,7 +244,6 @@
                     </div>
                     <button type="submit" class="btn">Send Message</button>
                 </form>
-
                 <p id="form-status" aria-live="polite"></p>
             </div>
         </div>
@@ -263,6 +255,15 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "EaEFdxEdUCLShFJPd",
+      });
+   })();
+</script>
 </body>
-
 </html>
