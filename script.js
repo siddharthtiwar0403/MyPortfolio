@@ -517,33 +517,3 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initial load
     fetchGitHubData();
 });
-
-
-document.getElementById("contact-form").addEventListener("submit", async function (e) {
-  e.preventDefault(); // STOP default submit
-
-  const formData = Object.fromEntries(new FormData(this));
-
-  try {
-    const response = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(formData)
-    });
-
-    const result = await response.json();
-
-    if (result.success) {
-      alert("Message sent successfully!");
-      this.reset();
-    } else {
-      alert("Failed to send message");
-    }
-
-  } catch (error) {
-    console.error("FORM ERROR:", error);
-    alert("Server error. Try again later.");
-  }
-});
