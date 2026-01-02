@@ -24,3 +24,5 @@ export default async function handler(req, res) {
     return res.status(500).json({ success: false });
   }
 }
+
+console.log("WEB3FORMS_KEY:", process.env.WEB3FORMS_KEY);
