@@ -808,6 +808,7 @@ section {
 .form-group input,
 .form-group textarea {
     width: 100%;
+    margin: 10px 0px;
     padding: 12px 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
