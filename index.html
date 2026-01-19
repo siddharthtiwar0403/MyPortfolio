@@ -233,10 +233,11 @@
                         target="/"><i class="fab fa-facebook"></i></a>
                     </div>
                 </div>
-                <form id="contact-form"  class="contact-form">
+                <form id="contact-form"  class="contact-form" action="https://formsubmit.co/siddharthtiwari1350@gmail.com" method="POST">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="phone" name="phone" placeholder="Your Phone No" required>
                         <input type="text" name="subject" placeholder="Subject">
                         <textarea name="message" placeholder="Your Message" required></textarea>
                     </div>
@@ -253,15 +254,5 @@
         </div>
     </footer>
     <script src="script.js"></script>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "EaEFdxEdUCLShFJPd",
-      });
-   })();
-</script>
 </body>
 </html>
